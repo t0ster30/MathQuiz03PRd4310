@@ -29,6 +29,7 @@ namespace MathQuiz03PRd4310
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.timeLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.plusLeftLabel = new System.Windows.Forms.Label();
@@ -37,7 +38,7 @@ namespace MathQuiz03PRd4310
             this.label4 = new System.Windows.Forms.Label();
             this.sum = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
-            this.minusRightLAbel = new System.Windows.Forms.Label();
+            this.minusRightLabel = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.minusLeftLabel = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -52,6 +53,7 @@ namespace MathQuiz03PRd4310
             this.label12 = new System.Windows.Forms.Label();
             this.dividedLeftLabel = new System.Windows.Forms.Label();
             this.startButton = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.sum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.difference)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.product)).BeginInit();
@@ -124,6 +126,8 @@ namespace MathQuiz03PRd4310
             this.sum.Name = "sum";
             this.sum.Size = new System.Drawing.Size(100, 35);
             this.sum.TabIndex = 1;
+            this.sum.Click += new System.EventHandler(this.answer_Enter);
+            this.sum.Enter += new System.EventHandler(this.answer_Enter);
             // 
             // label3
             // 
@@ -135,15 +139,15 @@ namespace MathQuiz03PRd4310
             this.label3.Text = "=";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // minusRightLAbel
+            // minusRightLabel
             // 
-            this.minusRightLAbel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.minusRightLAbel.Location = new System.Drawing.Point(182, 125);
-            this.minusRightLAbel.Name = "minusRightLAbel";
-            this.minusRightLAbel.Size = new System.Drawing.Size(60, 50);
-            this.minusRightLAbel.TabIndex = 9;
-            this.minusRightLAbel.Text = "?";
-            this.minusRightLAbel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.minusRightLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.minusRightLabel.Location = new System.Drawing.Point(182, 125);
+            this.minusRightLabel.Name = "minusRightLabel";
+            this.minusRightLabel.Size = new System.Drawing.Size(60, 50);
+            this.minusRightLabel.TabIndex = 9;
+            this.minusRightLabel.Text = "?";
+            this.minusRightLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label6
             // 
@@ -212,6 +216,8 @@ namespace MathQuiz03PRd4310
             this.difference.Name = "difference";
             this.difference.Size = new System.Drawing.Size(100, 35);
             this.difference.TabIndex = 2;
+            this.difference.Click += new System.EventHandler(this.answer_Enter);
+            this.difference.Enter += new System.EventHandler(this.answer_Enter);
             // 
             // product
             // 
@@ -220,6 +226,8 @@ namespace MathQuiz03PRd4310
             this.product.Name = "product";
             this.product.Size = new System.Drawing.Size(100, 35);
             this.product.TabIndex = 3;
+            this.product.Click += new System.EventHandler(this.answer_Enter);
+            this.product.Enter += new System.EventHandler(this.answer_Enter);
             // 
             // quotient
             // 
@@ -228,6 +236,8 @@ namespace MathQuiz03PRd4310
             this.quotient.Name = "quotient";
             this.quotient.Size = new System.Drawing.Size(100, 35);
             this.quotient.TabIndex = 4;
+            this.quotient.Click += new System.EventHandler(this.answer_Enter);
+            this.quotient.Enter += new System.EventHandler(this.answer_Enter);
             // 
             // label5
             // 
@@ -279,6 +289,12 @@ namespace MathQuiz03PRd4310
             this.startButton.TabIndex = 0;
             this.startButton.Text = "Начать тест";
             this.startButton.UseVisualStyleBackColor = true;
+            this.startButton.Click += new System.EventHandler(this.startButton_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form1
             // 
@@ -298,7 +314,7 @@ namespace MathQuiz03PRd4310
             this.Controls.Add(this.label10);
             this.Controls.Add(this.timesLeftLabel);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.minusRightLAbel);
+            this.Controls.Add(this.minusRightLabel);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.minusLeftLabel);
             this.Controls.Add(this.sum);
@@ -332,7 +348,7 @@ namespace MathQuiz03PRd4310
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.NumericUpDown sum;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label minusRightLAbel;
+        private System.Windows.Forms.Label minusRightLabel;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label minusLeftLabel;
         private System.Windows.Forms.Label label8;
@@ -347,6 +363,7 @@ namespace MathQuiz03PRd4310
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label dividedLeftLabel;
         private System.Windows.Forms.Button startButton;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
