@@ -146,6 +146,7 @@ namespace MathQuiz03PRd4310
                 // If the user ran out of time, stop the timer, show
                 // a MessageBox, and fill in the answers.
                 timer1.Stop();
+                timeLabel.BackColor = Color.Transparent;
                 timeLabel.Text = "Время вышло!";
                 MessageBox.Show("Вы не решили за отведённое время.", "Извините!");
                 sum.Value = addend1 + addend2;
