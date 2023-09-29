@@ -135,7 +135,7 @@ namespace MathQuiz03PRd4310
                 // display the new time left by updating the 
                 // Time Left label.
                 timeLeft = timeLeft - 1;
-                timeLabel.Text = timeLeft + " seconds";
+                timeLabel.Text = timeLeft + " секунд";
                 if (timeLeft <= 5)
                 {
                     timeLabel.BackColor = Color.Red;
